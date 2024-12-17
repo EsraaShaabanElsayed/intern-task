@@ -82,11 +82,6 @@ sudo apt-get install apache2 mysql-server php libapache2-mod-php php-mysql
    ?>
    ```
 
-2. Update the `index.php` to include the configuration file:
-   ```php
-   require_once 'config.php';
-   ```
-
 ---
 
 ## **5. Testing the Application**
