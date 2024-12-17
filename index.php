@@ -1,9 +1,6 @@
 <?php
-// MySQL credentials
-$servername = "localhost"; // Use the local database (localhost)
-$username = "web_user";    // The username you created for the database
-$password = "StrongPassword123"; // The password you set for the user
-$dbname = "web_db";        // The database name you created
+// Include the configuration file
+require_once 'config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,18 +11,14 @@ if ($conn->connect_error) {
 }
 
 // Simplified query for debugging
-$sql = "SELECT NOW()"; // Simplified query without alias
-
-// Debugging: print the query
-//echo "SQL Query: " . $sql . "<br>";
+$sql = "SELECT NOW()";
 
 // Execute the query
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Output the current time (use 'NOW()' as the column name)
     $row = $result->fetch_assoc();
-    $current_time = $row['NOW()']; // Corrected to use 'NOW()' as the column name
+    $current_time = $row['NOW()'];
 } else {
     $current_time = "Unable to fetch time.";
 }
@@ -37,7 +30,7 @@ $visitor_ip = $_SERVER['REMOTE_ADDR'];
 $conn->close();
 
 // Display the message
-echo "<h1>Hello!</h1>";
+echo "<h1>Hello Everyone!</h1>";
 echo "<p>Your IP address is: " . $visitor_ip . "</p>";
 echo "<p>The current time is: " . $current_time . "</p>";
 ?>
