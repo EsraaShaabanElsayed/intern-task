@@ -200,7 +200,7 @@ $dbname = "web_db";
 3. You should see the PHP page displaying your **IP address** and the **current time**.
 
 ---
-![Screenshot from 2024-12-17 14-19-25](https://github.com/user-attachments/assets/837f28f7-3db7-432c-9ab8-2df04187b1f0)
+![Screenshot from 2024-12-17 14-19-25](https://github.com/user-attachments/assets/1793c20d-9643-42e8-b3fc-5fa1d2807cb5)
 
 
 ## **8. Networking Basics**
